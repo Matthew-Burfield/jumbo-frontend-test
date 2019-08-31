@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { Link } from 'gatsby'
 import { jsx, css } from '@emotion/core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const BASE_URL = 'http://image.tmdb.org/t/p/'
 const BACKDROP_SIZE = 'w780'
@@ -104,6 +106,18 @@ const MovieDetails = ({ movie }) =>
           <p>{movie.overview}</p>
         </div>
       </div>
+      <Link
+        to="/"
+        css={css`
+          color: #e3f4fc;
+          position: absolute;
+          top: 32px;
+          left: 19px;
+          z-index: 1;
+        `}
+      >
+        <FontAwesomeIcon icon={faArrowLeft} size="lg" />
+      </Link>
       <img
         alt="backdrop"
         css={css`
