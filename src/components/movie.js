@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import { jsx, css } from '@emotion/core'
@@ -18,6 +19,7 @@ const Movie = ({ movie }) => (
         font-size: 14px;
         line-height: 16px;
         color: #e6f7ff;
+        padding: 12px 0 6px;
       }
       .date {
         font-family: Roboto;
@@ -32,12 +34,27 @@ const Movie = ({ movie }) => (
     <div
       css={css`
         height: 233px;
+        width: 155px;
+        img {
+          border-radius: 10px;
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+        }
       `}
     >
-      <img alt={movie.title} src={BASE_URL + POSTER_SIZE + movie.poster_path} />
+      <Link to={`/movie?id=${movie.id}`}>
+        <img
+          alt={movie.title}
+          src={BASE_URL + POSTER_SIZE + movie.poster_path}
+        />
+      </Link>
     </div>
     <div className="title">{movie.title}</div>
-    <div className="date">{movie.release_date}</div>
+    <div className="date">
+      {new Date(movie.release_date).toLocaleDateString('en-AU', {
+        month: 'long',
+        year: 'numeric',
+      })}
+    </div>
   </div>
 )
 

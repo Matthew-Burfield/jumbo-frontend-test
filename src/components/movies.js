@@ -8,7 +8,7 @@ const Movies = ({ movies }) => (
   <div
     css={css`
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
       grid-auto-rows: 281px;
       grid-row-gap: 24px;
       grid-column-gap: 30px;

@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 import axios from 'axios'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
 import Movies from '../components/movies'
+import Search from '../components/search'
 
 const IndexPage = () => {
   const [{ movies, nextPage }, setData] = useState({ movies: [], nextPage: 1 })
@@ -22,15 +22,11 @@ const IndexPage = () => {
     fetchData()
   }, [])
   return (
-    <Layout>
+    <Layout showHeader>
       <SEO title="Home" />
-      <h1>Hi people (page number: {nextPage}</h1>
-      <p>Welcome to your new Gatsby site.</p>
+      <Search />
       <Movies movies={movies} />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <button onClick={fetchData}>Next page</button>
+      <button onClick={fetchData}>Load more</button>
       <Link to="/page-2/">Go to page 2</Link>
       <Link to="/page-3/">Go to page 3</Link>
     </Layout>
