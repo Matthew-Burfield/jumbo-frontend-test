@@ -5,6 +5,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 // import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+/**
+ * TODO: Update so current input value is stored in local state
+ */
 const Search = ({ onSearch, searchTerm, updateSearchTerm }) => (
   <div
     css={css`
@@ -14,6 +17,8 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => (
       border-radius: 22px;
       padding: 0 51px 0 17px;
       margin: 0 20px 44px;
+      position: relative;
+      color: #01d277;
       :focus {
         outline-color: cornflowerblue;
         outline-style: auto;
@@ -39,8 +44,10 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => (
       }
       svg {
         position: absolute;
-        top: 8px;
+        top: 11px;
         right: 18px;
+        height: 16px;
+        width: 16px;
       }
     `}
   >
@@ -48,6 +55,7 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => (
       type="text"
       value={searchTerm}
       onChange={e => updateSearchTerm(e.target.value)}
+      defaultValue={searchTerm}
       onKeyPress={e => {
         if (e.key === 'Enter') {
           onSearch()
