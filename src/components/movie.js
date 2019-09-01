@@ -7,11 +7,39 @@ import { jsx, css } from '@emotion/core'
 const BASE_URL = 'http://image.tmdb.org/t/p/'
 const POSTER_SIZE = 'w185'
 
+const getPillColor = score => {
+  if (score <= 4) {
+    return '#D1225B'
+  } else if (score > 4 && score < 7) {
+    return '#4902A3'
+  } else if (score > 7) {
+    return '#01d277'
+  }
+  return '#D1225B'
+}
+
 const Movie = ({ movie }) => (
   <div
     css={css`
+      position: relative;
       display: flex;
       flex-direction: column;
+      .rating-pill {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 40px;
+        height: 20px;
+        background-color: ${getPillColor(movie.vote_average)};
+        border-radius: 8px;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        color: #ffffff;
+      }
       .title {
         font-family: Roboto;
         font-style: normal;
@@ -50,6 +78,7 @@ const Movie = ({ movie }) => (
         />
       </Link>
     </div>
+    <div className="rating-pill">{movie.vote_average * 10}%</div>
     <div className="title">{movie.title}</div>
     <div className="date">
       {new Date(movie.release_date).toLocaleDateString('en-AU', {

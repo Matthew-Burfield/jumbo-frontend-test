@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, title }) {
         {
           rel: 'stylesheet',
           href:
-            'https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto|Montserrat:400,700&display=swap',
+            'https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,700|Montserrat:400,700&display=swap',
         },
       ]}
       meta={[

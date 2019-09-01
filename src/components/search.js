@@ -8,15 +8,26 @@ import { connect } from 'react-redux'
 const Search = ({ onSearch, searchTerm, updateSearchTerm }) => (
   <div
     css={css`
-      padding: 0 20px 44px;
-      position: relative;
-      color: #01d277;
+      height: 38px;
+      background: #ffffff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 22px;
+      padding: 0 51px 0 17px;
+      margin: 0 20px 44px;
+      :focus {
+        outline-color: cornflowerblue;
+        outline-style: auto;
+      }
       input {
-        height: 38px;
-        background: #ffffff;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-        border-radius: 22px;
         width: 100%;
+        border: none;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        :focus {
+          outline-color: transparent;
+          outline-style: none;
+        }
       }
       input[type='text'] {
         font-family: Roboto;
@@ -24,13 +35,12 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => (
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
-        padding: 0 44px 0 17px;
         color: #01d277;
       }
       svg {
         position: absolute;
-        top: 11px;
-        right: 35px;
+        top: 8px;
+        right: 18px;
       }
     `}
   >

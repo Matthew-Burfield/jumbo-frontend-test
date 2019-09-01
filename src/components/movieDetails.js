@@ -73,7 +73,7 @@ const MovieDetails = ({ movie }) =>
                 })}
               </span>
               {' • '}
-              <span>{movie.vote_average * 100}% User Score</span>
+              <span>{movie.vote_average * 10}% User Score</span>
             </p>
             <p>{formatRunTime(movie.runtime)}</p>
           </div>
