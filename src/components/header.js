@@ -8,6 +8,11 @@ const Header = ({ siteTitle }) => (
     css={css`
       marginbottom: 1.45rem;
       padding: 60px 0 49px;
+      background: radial-gradient(
+        312.01px at 53.46% -21.35%,
+        rgba(5, 112, 172, 0.46) 0%,
+        rgba(8, 27, 35, 0) 100%
+      );
     `}
   >
     <div

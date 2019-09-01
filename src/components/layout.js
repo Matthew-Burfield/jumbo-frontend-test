@@ -4,11 +4,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
-import React from 'react'
+/** @jsx jsx */
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Global, css } from '@emotion/core'
+import { Global, css, jsx } from '@emotion/core'
 
 import Header from './header'
 
@@ -25,12 +24,18 @@ const Layout = ({ children, showHeader }) => {
 
   return (
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        paddingTop: 0,
-        backgroundColor: '#081b23',
-      }}
+      css={css`
+        margin: 0 auto;
+        maxwidth: 960px;
+        padding-top: 0;
+        background-color: #081b23;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+      `}
     >
       <Global
         styles={css`

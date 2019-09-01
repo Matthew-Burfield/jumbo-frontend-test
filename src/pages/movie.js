@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -25,7 +24,6 @@ const DetailedMoviePage = ({ location }) => {
     <Layout>
       <SEO title="Movie details" />
       <MovieDetails movie={movie} />
-      <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
 }

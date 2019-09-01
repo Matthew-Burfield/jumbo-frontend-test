@@ -12,6 +12,7 @@ const Movies = ({ movies }) => (
       grid-auto-rows: 281px;
       grid-row-gap: 24px;
       grid-column-gap: 30px;
+      padding: 0 20px;
     `}
   >
     {movies.map(movie => (

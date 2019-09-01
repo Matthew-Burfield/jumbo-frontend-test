@@ -71,8 +71,9 @@ const MovieDetails = ({ movie }) =>
                 {new Date(movie.release_date).toLocaleDateString('en-AU', {
                   year: 'numeric',
                 })}
-              </span>{' '}
-              • <span>{movie.vote_average * 100}% User Score</span>
+              </span>
+              {' • '}
+              <span>{movie.vote_average * 100}% User Score</span>
             </p>
             <p>{formatRunTime(movie.runtime)}</p>
           </div>
@@ -83,7 +84,7 @@ const MovieDetails = ({ movie }) =>
             height: 1px;
             border-top: 1px solid #0f303d;
             box-sizing: border-box;
-            padding: 30px 0 24px;
+            margin: 30px 0 24px;
           `}
         />
         <div
