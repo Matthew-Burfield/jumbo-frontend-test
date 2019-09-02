@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import MovieDetails from '../components/movieDetails'
+import Movie from '../components/movie'
 
 const DetailedMoviePage = ({ location }) => {
   const [{ movie }, setData] = useState({ movies: void 0 })
@@ -23,7 +23,7 @@ const DetailedMoviePage = ({ location }) => {
   return (
     <Layout>
       <SEO title="Movie details" />
-      <MovieDetails movie={movie} />
+      <Movie movie={movie} />
     </Layout>
   )
 }

@@ -36,7 +36,7 @@ const IndexPage = ({ searchTerm, movies, lastFetchedPage, saveMovies }) => {
       <SEO title="Home" />
       <Search onSearch={fetchData} />
       <Movies movies={movies} />
-      <button onClick={loadNextPage}>Load more</button>
+      {/* <button onClick={loadNextPage}>Load more</button> */}
     </Layout>
   )
 }
