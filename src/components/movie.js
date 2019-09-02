@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
+import { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { jsx, css } from '@emotion/core'
@@ -18,7 +18,7 @@ const formatRunTime = runtime => {
 
 const MovieDetails = ({ movie }) =>
   !movie ? null : (
-    <>
+    <Fragment>
       <div
         css={css`
           position: relative;
@@ -130,7 +130,7 @@ const MovieDetails = ({ movie }) =>
         `}
         src={BASE_URL + BACKDROP_SIZE + movie.backdrop_path}
       />
-    </>
+    </Fragment>
   )
 
 MovieDetails.propTypes = {

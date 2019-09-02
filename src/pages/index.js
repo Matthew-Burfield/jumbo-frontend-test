@@ -25,9 +25,6 @@ const IndexPage = ({ searchTerm, movies, lastFetchedPage, saveMovies }) => {
     const { data } = await axios.get(getUrl(searchTerm, pageToFetch))
     saveMovies(data.results, pageToFetch)
   }
-  const loadNextPage = () => {
-    fetchData()
-  }
   useEffect(() => {
     fetchData()
   }, [searchTerm])
@@ -36,7 +33,6 @@ const IndexPage = ({ searchTerm, movies, lastFetchedPage, saveMovies }) => {
       <SEO title="Home" />
       <Search onSearch={fetchData} />
       <Movies movies={movies} />
-      {/* <button onClick={loadNextPage}>Load more</button> */}
     </Layout>
   )
 }

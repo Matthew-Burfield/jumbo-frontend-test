@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Logo from './logo'

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { jsx, css } from '@emotion/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
