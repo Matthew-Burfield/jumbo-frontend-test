@@ -29,10 +29,8 @@ const IndexPage = ({ searchTerm, movies, lastFetchedPage, saveMovies }) => {
     fetchData()
   }
   useEffect(() => {
-    if (!movies.length) {
-      fetchData()
-    }
-  }, [])
+    fetchData()
+  }, [searchTerm])
   return (
     <Layout showHeader>
       <SEO title="Home" />
