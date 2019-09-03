@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Movies from '../components/movies'
 import Search from '../components/search'
+import Title from '../components/title'
 
 const BASE_URL = 'https://api.themoviedb.org/3/'
 const API_KEY = '6ed12e064b90ae1290fa326ce9e790ff'
@@ -32,6 +33,7 @@ const IndexPage = ({ searchTerm, movies, lastFetchedPage, saveMovies }) => {
     <Layout showHeader>
       <SEO title="Home" />
       <Search onSearch={fetchData} />
+      <Title searchTerm={searchTerm} />
       <Movies movies={movies} />
     </Layout>
   )

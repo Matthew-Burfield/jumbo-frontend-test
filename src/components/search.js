@@ -3,13 +3,9 @@ import { useState } from 'react'
 import { jsx, css } from '@emotion/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-// import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-/**
- * TODO: Update so current input value is stored in local state
- */
-const Search = ({ onSearch, searchTerm, updateSearchTerm }) => {
+const Search = ({ searchTerm, updateSearchTerm }) => {
   const [{ localSearchTerm }, setData] = useState({
     localSearchTerm: searchTerm,
   })
@@ -27,6 +23,9 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => {
         :focus {
           outline-color: cornflowerblue;
           outline-style: auto;
+        }
+        label {
+          display: none;
         }
         input {
           width: 100%;
@@ -56,11 +55,14 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => {
         }
       `}
     >
+      <label htmlFor="search-input">Search</label>
       <input
-        type="text"
+        id="search-input"
+        type="search"
+        name="search"
         value={localSearchTerm}
         onChange={e => setData({ localSearchTerm: e.target.value })}
-        onKeyPress={e => {
+        onKeyDown={e => {
           if (e.key === 'Enter') {
             updateSearchTerm(localSearchTerm)
           }
@@ -70,10 +72,6 @@ const Search = ({ onSearch, searchTerm, updateSearchTerm }) => {
     </div>
   )
 }
-
-// Movies.propTypes = {
-//   movies: PropTypes.any,
-// }
 
 const mapStateToProps = state => ({
   searchTerm: state.searchTerm,

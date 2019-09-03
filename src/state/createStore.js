@@ -1,6 +1,6 @@
 import { createStore as reduxCreateStore } from 'redux'
 
-const reducer = (state, action) => {
+export const reducer = (state, action) => {
   // if (action.type === `INCREMENT`) {
   //   return Object.assign({}, state, {
   //     count: state.count + 1,
@@ -34,7 +34,7 @@ const reducer = (state, action) => {
   }
 }
 
-const initialState = {
+export const initialState = {
   movies: [],
   searchTerm: '',
   lastFetchedPage: 0,

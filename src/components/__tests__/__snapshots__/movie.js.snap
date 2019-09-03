@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie renders correctly 1`] = `
+<div>
+  <div
+    class="css-7lldu8-MovieDetails"
+  >
+    <div
+      class="css-1yk5qol-MovieDetails"
+    >
+      <img
+        alt="The Lion King"
+        src="http://image.tmdb.org/t/p/w154/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg"
+      />
+      <div
+        class="css-19md6lb-MovieDetails"
+      >
+        <h1>
+          The Lion King
+        </h1>
+        <p>
+          <span>
+            2019
+          </span>
+           • 
+          <span>
+            72
+            % User Score
+          </span>
+        </p>
+        <p>
+          NaNh NaN min
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-kobgqc-MovieDetails"
+    />
+    <div
+      class="css-1kz12z3-MovieDetails"
+    >
+      <h2>
+        Overview
+      </h2>
+      <p>
+        Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.
+      </p>
+    </div>
+  </div>
+  <a
+    class="css-1nxnzrd-MovieDetails"
+    href="/"
+  >
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-arrow-left fa-w-14 fa-lg "
+      data-icon="arrow-left"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+        fill="currentColor"
+      />
+    </svg>
+  </a>
+  <img
+    alt="backdrop"
+    class="css-1sje80g-MovieDetails"
+    src="http://image.tmdb.org/t/p/w780/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg"
+  />
+</div>
+`;

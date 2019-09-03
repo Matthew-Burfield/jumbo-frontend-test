@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { jsx, css } from '@emotion/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
+import { tDetailedMovie } from '../types'
 
 const BASE_URL = 'http://image.tmdb.org/t/p/'
 const BACKDROP_SIZE = 'w780'
@@ -134,7 +135,7 @@ const MovieDetails = ({ movie }) =>
   )
 
 MovieDetails.propTypes = {
-  movie: PropTypes.any,
+  movie: tDetailedMovie,
 }
 
 export default MovieDetails

@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { jsx, css } from '@emotion/core'
 
+import { tMovie } from '../types'
+
 const BASE_URL = 'http://image.tmdb.org/t/p/'
 const POSTER_SIZE = 'w185'
 
@@ -84,6 +86,10 @@ const MovieItem = ({ movie }) => (
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
           max-height: 100%;
           max-width: 100%;
+          transition: transform 0.2s;
+          :hover {
+            transform: scale(1.1);
+          }
         }
       `}
     >
@@ -106,11 +112,11 @@ const MovieItem = ({ movie }) => (
 )
 
 Movies.propTypes = {
-  movies: PropTypes.any,
+  movies: PropTypes.arrayOf(tMovie),
 }
 
 MovieItem.propTypes = {
-  movie: PropTypes.any,
+  movie: tMovie,
 }
 
 export default Movies

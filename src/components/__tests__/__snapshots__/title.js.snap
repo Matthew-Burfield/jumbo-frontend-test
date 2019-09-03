@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders correctly 1`] = `
+<div>
+  <h1
+    class="css-75jtew-Title"
+  >
+    Popular
+  </h1>
+</div>
+`;
+
+exports[`Title updates the title after having searched for a new movie 1`] = `
+<div>
+  <h1
+    class="css-75jtew-Title"
+  >
+    Results: The Lion King
+  </h1>
+</div>
+`;
