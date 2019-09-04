@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const { bool, string, number, shape, arrayOf, object } = PropTypes
+const { bool, string, number, shape, arrayOf, array } = PropTypes
 
 const sharedMovieProps = {
   adult: bool,
@@ -27,14 +27,14 @@ export const tDetailedMovie = shape({
   ...sharedMovieProps,
   belongs_to_collection: bool,
   budget: number,
-  genres: object,
+  genres: array,
   homepage: string,
-  imdb_id: number,
-  production_companies: object,
-  production_countries: object,
+  imdb_id: string,
+  production_companies: array,
+  production_countries: array,
   revenue: number,
   runtime: number,
-  spoken_languages: object,
+  spoken_languages: array,
   status: string,
   tagline: string,
 })

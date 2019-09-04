@@ -38,7 +38,8 @@ const Search = ({ searchTerm, updateSearchTerm }) => {
             outline-style: none;
           }
         }
-        input[type='text'] {
+        input[type='search'],
+        input[type='search']::placeholder {
           font-family: Roboto;
           font-style: normal;
           font-weight: 500;
@@ -60,6 +61,7 @@ const Search = ({ searchTerm, updateSearchTerm }) => {
         id="search-input"
         type="search"
         name="search"
+        placeholder="Search"
         value={localSearchTerm}
         onChange={e => setData({ localSearchTerm: e.target.value })}
         onKeyDown={e => {

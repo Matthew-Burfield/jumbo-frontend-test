@@ -58,6 +58,8 @@ const MovieDetails = ({ movie }) =>
                 padding-bottom: 16px;
               }
               p {
+                font-family: Montserrat;
+                font-style: normal;
                 color: #b8d8e6;
                 font-size: 12px;
                 line-height: 21px;

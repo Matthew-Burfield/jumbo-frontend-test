@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 import Logo from './logo'
 
 const lineCoordinates = [
-  { id: 1, top: -120, left: 110, height: 200 },
-  { id: 2, top: -150, left: 110, height: 200 },
-  { id: 3, top: 40, left: 50, height: 200 },
-  { id: 4, top: -105, right: 10, height: 200 },
-  { id: 5, top: -145, right: 1, height: 200 },
-  { id: 6, top: 70, right: 90, height: 150 },
+  { id: 1, top: -114, left: 79 },
+  { id: 2, top: -87, left: 79 },
+  { id: 3, top: 46, left: 52 },
+  { id: 4, top: -69, right: 52 },
+  { id: 5, top: -105, right: 41 },
+  { id: 6, top: 52, right: 73 },
 ]
 
 const Header = ({ siteTitle }) => (
@@ -32,7 +32,7 @@ const Header = ({ siteTitle }) => (
         key={line.id}
         css={css`
           background-color: rgba(1, 210, 119, 0.83);
-          height: ${line.height}px;
+          height: 162px;
           width: 4px;
           border-radius: 3.5px;
           transform: rotate(45deg);

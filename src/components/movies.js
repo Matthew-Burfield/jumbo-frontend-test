@@ -26,8 +26,8 @@ const Movies = ({ movies }) => (
       grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
       grid-auto-rows: 281px;
       grid-row-gap: 24px;
-      grid-column-gap: 30px;
-      padding: 0 20px;
+      grid-column-gap: 20px;
+      padding: 0 15px 0 15px;
     `}
   >
     {movies.map(movie => (
@@ -88,7 +88,7 @@ const MovieItem = ({ movie }) => (
           max-width: 100%;
           transition: transform 0.2s;
           :hover {
-            transform: scale(1.1);
+            transform: scale(1.04);
           }
         }
       `}

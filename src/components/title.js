@@ -9,7 +9,7 @@ const Title = ({ searchTerm }) => (
       padding: 0 20px 12px;
     `}
   >
-    {searchTerm === '' ? 'Popular' : `Results: ${searchTerm}`}
+    {searchTerm === '' ? 'Popular Movies' : `Results: ${searchTerm}`}
   </h1>
 )
 
