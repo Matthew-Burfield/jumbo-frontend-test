@@ -7,6 +7,8 @@ const Title = ({ searchTerm }) => (
     css={css`
       margin: 0;
       padding: 0 20px 12px;
+      font-size: 20px;
+      line-height: 24px;
     `}
   >
     {searchTerm === '' ? 'Popular Movies' : `Results: ${searchTerm}`}
